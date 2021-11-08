@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/no_filter"
+        android:title="@string/tampil_semua_text"/>
+    <item
+        android:id="@+id/filter_3_juta_up"
+        android:title="@string/harga_3_juta_text"/>
+    <item
+        android:id="@+id/filter_3_juta_down"
+        android:title="@string/harga_3_juta_down_text"/>
+    <item
+        android:id="@+id/filter_kapasitas_500_up"
+        android:title="@string/kapasitas_500_up_text"/>
+    <item
+        android:id="@+id/filter_kapasitas_500_down"
+        android:title="@string/kapasitas_500_down_text"/>
+</menu>

@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.cekagenda.CekAgendaActivity">
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/big_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_24dp"
+                android:background="@color/dark_lime"
+                android:text="@string/detail_booking"
+                android:textColor="@color/white_lime"
+                android:textAlignment="center"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_title"
+                app:layout_constraintBottom_toTopOf="@id/layout_button">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ID Booking : "
+                        android:layout_marginTop="@dimen/dimen_12dp"
+                        android:layout_marginStart="@dimen/dimen_12dp"
+                        android:layout_marginEnd="@dimen/dimen_12dp"
+                        style="@style/small_text"/>
+                    <TextView
+                        android:id="@+id/tv_id_booking"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="#3"
+                        android:layout_marginStart="@dimen/dimen_12dp"
+                        android:layout_marginEnd="@dimen/dimen_12dp"
+                        android:textStyle="bold"
+                        style="@style/big_text"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nama Gedung : "
+                        android:layout_marginTop="@dimen/dimen_12dp"
+                        android:layout_marginStart="@dimen/dimen_12dp"
+                        android:layout_marginEnd="@dimen/dimen_12dp"
+                        style="@style/small_text"/>
+                    <TextView
+                        android:id="@+id/tv_nama_gedung"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="Gedung Juang Tambun"
+                        android:layout_marginStart="@dimen/dimen_12dp"
+                        android:layout_marginEnd="@dimen/dimen_12dp"
+                        android:textStyle="bold"
+                        style="@style/big_text"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tanggal Sewa : "
+                        android:layout_marginTop="@dimen/dimen_12dp"
+                        android:layout_marginStart="@dimen/dimen_12dp"
+                        android:layout_marginEnd="@dimen/dimen_12dp"
+                        style="@style/small_text"/>
+                    <TextView
+                        android:id="@+id/tv_tanggal_sewa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="05 September 2021"
+                        android:layout_marginStart="@dimen/dimen_12dp"
+                        android:layout_marginEnd="@dimen/dimen_12dp"
+                        android:textStyle="bold"
+                        style="@style/big_text"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Waktu Sewa : "
+                        android:layout_marginTop="@dimen/dimen_12dp"
+                        android:layout_marginStart="@dimen/dimen_12dp"
+                        android:layout_marginEnd="@dimen/dimen_12dp"
+                        style="@style/small_text"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:padding="@dimen/dimen_12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_time_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/time_1"
+                            android:visibility="gone"
+                            tools:visibility="visible"
+                            style="@style/big_text"/>
+                        <TextView
+                            android:id="@+id/tv_time_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/time_2"
+                            android:visibility="gone"
+                            tools:visibility="visible"
+                            style="@style/big_text"/>
+                        <TextView
+                            android:id="@+id/tv_time_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/time_3"
+                            android:visibility="gone"
+                            tools:visibility="visible"
+                            style="@style/big_text"/>
+                        <TextView
+                            android:id="@+id/tv_time_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/time_4"
+                            android:visibility="gone"
+                            tools:visibility="visible"
+                            style="@style/big_text"/>
+                        <TextView
+                            android:id="@+id/tv_time_5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/time_5"
+                            android:visibility="gone"
+                            tools:visibility="visible"
+                            style="@style/big_text"/>
+                        <TextView
+                            android:id="@+id/tv_time_6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/time_6"
+                            android:visibility="gone"
+                            tools:visibility="visible"
+                            style="@style/big_text"/>
+                        <TextView
+                            android:id="@+id/tv_time_7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/time_7"
+                            android:visibility="gone"
+                            tools:visibility="visible"
+                            style="@style/big_text"/>
+                        <TextView
+                            android:id="@+id/tv_time_8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/time_8"
+                            android:visibility="gone"
+                            tools:visibility="visible"
+                            style="@style/big_text"/>
+                        <TextView
+                            android:id="@+id/tv_time_9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/time_9"
+                            android:visibility="gone"
+                            tools:visibility="visible"
+                            style="@style/big_text"/>
+                        <TextView
+                            android:id="@+id/tv_time_10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/time_10"
+                            android:visibility="gone"
+                            tools:visibility="visible"
+                            style="@style/big_text"/>
+                        <TextView
+                            android:id="@+id/tv_time_11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/time_11"
+                            android:visibility="gone"
+                            tools:visibility="visible"
+                            style="@style/big_text"/>
+                        <TextView
+                            android:id="@+id/tv_time_12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/time_12"
+                            android:visibility="gone"
+                            tools:visibility="visible"
+                            style="@style/big_text"/>
+                        <TextView
+                            android:id="@+id/tv_time_13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/time_13"
+                            android:visibility="gone"
+                            tools:visibility="visible"
+                            style="@style/big_text"/>
+                        <TextView
+                            android:id="@+id/tv_time_14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/time_14"
+                            android:visibility="gone"
+                            tools:visibility="visible"
+                            style="@style/big_text"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Status : "
+                        android:layout_marginTop="@dimen/dimen_12dp"
+                        android:layout_marginStart="@dimen/dimen_12dp"
+                        android:layout_marginEnd="@dimen/dimen_12dp"
+                        style="@style/small_text"/>
+                    <TextView
+                        android:id="@+id/tv_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="Menunggu Pembayaran"
+                        android:layout_marginStart="@dimen/dimen_12dp"
+                        android:layout_marginEnd="@dimen/dimen_12dp"
+                        android:textStyle="bold"
+                        style="@style/big_text"/>
+
+                    <LinearLayout
+                        android:id="@+id/layout_booking_customer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        tools:visibility="visible"
+                        android:orientation="vertical">
+                         <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Customer : "
+                        android:layout_marginTop="@dimen/dimen_12dp"
+                        android:layout_marginStart="@dimen/dimen_12dp"
+                        android:layout_marginEnd="@dimen/dimen_12dp"
+                        style="@style/small_text"/>
+                    <TextView
+                        android:id="@+id/tv_customer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="Fulan"
+                        android:layout_marginStart="@dimen/dimen_12dp"
+                        android:layout_marginEnd="@dimen/dimen_12dp"
+                        android:textStyle="bold"
+                        style="@style/big_text"/>
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:id="@+id/layout_panduan_transfer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        tools:visibility="visible"
+                        android:padding="@dimen/dimen_12dp"
+                        android:layout_marginTop="@dimen/dimen_12dp"
+                        android:textAlignment="center"
+                        android:background="@color/orange">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/small_text"
+                            android:textSize="20sp"
+                            android:textColor="@color/white"
+                            android:textAlignment="center"
+                            android:text="Silahkan Transfer Ke Rekening"/>
+                        <TextView
+                            android:id="@+id/tv_detail_rekening"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_8dp"
+                            android:textSize="20sp"
+                            style="@style/small_text"
+                            android:textColor="@color/white"
+                            android:textAlignment="center"
+                            tools:text="123456789 Mandiri a.n Fulan"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/layout_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/layout_button_customer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    android:orientation="horizontal">
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_cancel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/lime"
+                        android:layout_weight="1"
+                        android:layout_margin="@dimen/dimen_12dp"
+                        android:text="@string/batal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_button_pemilik"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    tools:visibility="gone"
+                    android:orientation="vertical">
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_cancel_order"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/orange"
+                        android:layout_weight="1"
+                        android:layout_marginStart="@dimen/dimen_12dp"
+                        android:layout_marginEnd="@dimen/dimen_12dp"
+                        android:text="@string/batalkan_pesanan" />
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_konfirmasi_sudah_bayar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/lime"
+                        android:layout_weight="1"
+                        android:layout_marginStart="@dimen/dimen_12dp"
+                        android:layout_marginEnd="@dimen/dimen_12dp"
+                        android:text="@string/konfirmasi_sudah_bayar" />
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</layout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="btn_small" parent="Widget.MaterialComponents.Button">
+        <item name="android:padding">16dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="cornerRadius">10dp</item>
+    </style>
+
+    <style name="btn_small.light_gray">
+        <item name="android:backgroundTint">@color/gray</item>
+    </style>
+
+<!--    Text -->
+<!--    Small Text -->
+    <style name="small_text" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/dark_gray</item>
+    </style>
+
+    <style name="small_text.lime">
+        <item name="android:textColor">@color/lime</item>
+    </style>
+
+    <style name="container_top_radius">
+        <item name="android:paddingTop">40dp</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">24dp</item>
+        <item name="android:paddingBottom">24dp</item>
+    </style>
+    <!--    Small Text -->
+    <style name="big_text" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+<!--    CUSTOM DATE PICKER-->
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:datePickerStyle">@style/MyDatePicker</item>
+    </style>
+
+    <style name="ItvDialogTheme" parent="android:Theme.Material.Light.Dialog">
+        <item name="android:datePickerStyle">@style/MyDatePicker</item>
+    </style>
+
+    <style name="MyDatePicker" parent="android:Widget.Material.Light.DatePicker">
+        <item name="android:datePickerMode">spinner</item>
+    </style>
+
+</resources>

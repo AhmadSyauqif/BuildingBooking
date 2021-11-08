@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="gedungList"
+            type="com.afifemwe.bookinggedung.ui.main.pemilik.beranda.BerandaPemilikViewModel" />
+    </data>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lime">
+
+            <TextView
+                android:id="@+id/tv_title_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/big_text"
+                android:textColor="@color/white"
+                android:layout_margin="@dimen/dimen_16dp"
+                android:text="Cari Gedung"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+            <LinearLayout
+                android:id="@+id/search_view_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_search"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/dimen_16dp"
+                    app:cardCornerRadius="@dimen/dimen_8dp"
+                    android:background="@color/white"
+                    android:visibility="visible"
+                    tools:visibility="visible">
+                    <EditText
+                        android:id="@+id/et_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dimen_8dp"
+                        android:drawableTint="@color/dark_lime"
+                        android:drawableEnd="@drawable/ic_search"
+                        android:hint="@string/cari"/>
+                </com.google.android.material.card.MaterialCardView>
+
+                <ImageView
+                    android:id="@+id/iv_filter"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/dimen_16dp"
+                    android:layout_weight="5"
+                    android:src="@drawable/ic_filter" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_waiting"
+                android:layout_width="422dp"
+                android:layout_height="600dp"
+                android:layout_marginTop="@dimen/dimen_16dp"
+                android:background="@drawable/bg_white_top_radius"
+                android:src="@drawable/waiting_ilustration"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/search_view_layout" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_gedung"
+                android:visibility="gone"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:padding="@dimen/dimen_16dp"
+                android:background="@drawable/bg_white_top_radius"
+                android:layout_marginTop="@dimen/dimen_16dp"
+                app:layout_constraintTop_toBottomOf="@id/search_view_layout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_add_gedung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add"
+                android:background="@color/lime"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="@dimen/dimen_35dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</layout>
